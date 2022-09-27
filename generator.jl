@@ -32,7 +32,7 @@ for ((remote, branch), docref) in docs
     run(`git clone --depth 1 $prefix$remote --branch $branch --single-branch $(docref.upstream)`)
 end
 
-outpath = joinpath(@__DIR__, "out")
+outpath = joinpath(@__DIR__, "docs")
 
 MultiDocumenter.make(
     outpath,
